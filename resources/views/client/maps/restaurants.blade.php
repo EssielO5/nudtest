@@ -86,21 +86,27 @@
             }
         }
 
-        function showPosition(position){
-            document.querySelector('.myForm input[name= "latitude"]').value = position.coords.latitude;
-            document.querySelector('.myForm input[name= "longitude"]').value = position.coords.longitude;
+        function showPosition(position) {
+            document.querySelector('.myForm input[name="latitude"]').value = position.coords.latitude;
+            document.querySelector('.myForm input[name="longitude"]').value = position.coords.longitude;
         }
 
-        function showError(error){
-            switch(error.code){
+        function showError(error) {
+            switch (error.code) {
                 case error.PERMISSION_DENIED:
-                    alert("Vous devez autorisé la requête afin de détecter votre position");
-                    location.reload();
+                    alert("Veuillez autoriser l'accès à votre position pour continuer.");
+                    // ❌ Supprimé : location.reload() — c'était la cause de la boucle
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Votre position est indisponible.");
+                    break;
+                case error.TIMEOUT:
+                    alert("La requête de géolocalisation a expiré.");
                     break;
             }
         }
 
-        getLocation()
+        getLocation();
 
     </script>
 @endsection
