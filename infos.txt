@@ -1,0 +1,13 @@
+Mots de passe : password
+
+*Clients
+
+--> client@client.com
+--> pigierbenin@gmail.com
+
+
+*Restaurants
+
+--> restaurant1@restaurant.com
+--> restaurant2@restaurant.com
+--> restaurant3@restaurant.com

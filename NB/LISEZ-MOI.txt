@@ -1,0 +1,16 @@
+***** Nùdutin App ******
+
+1) Créer une base de données Mysql/SQL
+
+2) Modifier le nom de la base de données dans le fichier .env
+
+2) Ouvrir un terminal et faire
+
+	- php artisan serve
+	- php artisan migrate
+	- php artisan db:seed (Pour migrer les factories/ utilisateurs par défauts)
+	- php artisan reverb:start dans un nouveau terminal (Pour faire fonctionner le chat de messagerie - envoi de msg en temps réel)
+
+4) Installer et démarrer le fichier MailHog (Pour recevoir les mails en local)
+
+5) Aller sur le lien "localhost:8025" pour lire les mails en local.
